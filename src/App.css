@@ -7,6 +7,14 @@
   color: #6D6875;
 }
 
+.row {
+  display: flex;
+}
+
+.App .row input {
+  width: 75%;
+}
+
 h1 {
   padding-top: 18px;
   font-size: 25px;
@@ -14,6 +22,7 @@ h1 {
 }
 
 .App label {
+  margin-left: 2px;
   margin-top: 10px;
   display: block;
 }
@@ -42,7 +51,7 @@ h1 {
 
 .button {
   padding: 10px;
-  margin: 10px 0;
+  margin: 15px 0;
   font-size: 30px;
   border-radius: 250px;
   background-color: #FFCDB2;

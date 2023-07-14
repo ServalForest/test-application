@@ -29,29 +29,40 @@ function App() {
       <h1> House Price Prediction</h1>
       <div className='form'>
         <form onSubmit={handleSubmit}>
-          <div>
-            <label> Lot Area </label>
-          </div>
-          <div>
-            <input type='number' name='lotArea' value={lotArea} onChange={(e) => setLotArea(e.target.value)}></input>
-          </div>
-          <div>
-            <label> Year Built </label>
+          <div className='row'>
             <div>
+              <div>
+                <label> Lot Area </label>
+              </div>
+              <div>
+                <input type='number' name='lotArea' value={lotArea} onChange={(e) => setLotArea(e.target.value)}></input>
+              </div>
             </div>
-            <input type='number' name='yearBuilt' value={yearBuilt} onChange={(e) => setYearBuilt(e.target.value)}></input>
-          </div>
-          <div>
-            <label> First Floor Square Footage </label>
             <div>
+              <div>
+                <label> Year Built </label>
+              </div>
+              <div>
+                <input type='number' name='yearBuilt' value={yearBuilt} onChange={(e) => setYearBuilt(e.target.value)}></input>
+              </div>
             </div>
-            <input type='number' name='1stFlrSF' value={frstFlrSF} onChange={(e) => set1stFlrSF(e.target.value)}></input>
           </div>
-          <div>
-            <label> Second Floor Square Footage </label>
+          <div className='row'>
             <div>
+              <div>
+                <label>Floor 1 sq ft</label>
+              </div>
+              <div>
+                <input type='number' name='1stFlrSF' value={frstFlrSF} onChange={(e) => set1stFlrSF(e.target.value)}></input>
+              </div>
+            </div><div>
+              <div>
+                <label>Floor 2 sq ft</label>
+                <div>
+                </div>
+                <input type='number' name='2ndFlrSF' value={scndFlrSF} onChange={(e) => set2ndFlrSF(e.target.value)}></input>
+              </div>
             </div>
-            <input type='number' name='2ndFlrSF' value={scndFlrSF} onChange={(e) => set2ndFlrSF(e.target.value)}></input>
           </div>
           <div>
             <label> Amount of bathrooms </label>
