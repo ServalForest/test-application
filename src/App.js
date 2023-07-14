@@ -27,39 +27,55 @@ function App() {
   return (
     <div className="App">
       <h1> House Price Prediction</h1>
+      <div className='form'>
       <form onSubmit={handleSubmit}> 
         <div>
         <label> Lot Area </label>
+        </div>
+        <div>
         <input name='lotArea' type='text' value={lotArea} onChange={(e) => setLotArea(e.target.value)}></input>
         </div>
         <div>
         <label> Year Built </label>
+        <div>
+        </div>
         <input name='yearBuilt' type='text'  value={yearBuilt} onChange={(e) => setYearBuilt(e.target.value)}></input>
         </div>
         <div>
         <label> First Floor Square Footage </label>
+        <div>
+        </div>
         <input name='1stFlrSF' type='text'value={frstFlrSF} onChange={(e) => set1stFlrSF(e.target.value)}></input>
         </div>
         <div>
        <label> Second Floor Square Footage </label>
+       <div>
+       </div>
         <input name='2ndFlrSF' type='text'value={scndFlrSF} onChange={(e) => set2ndFlrSF(e.target.value)}></input>
         </div>
         <div>
         <label> Amount of bathrooms </label>
+        <div>
+        </div>
         <input name='fullBath' type='text'value={fullBath} onChange={(e) => setFullBath(e.target.value)}></input>
         </div>
         <div>
-        <label> Number of bedrooms above ground level </label>
+        <label> Bedrooms above ground level </label>
+        <div>
+        </div>
         <input name='bedroomAbvGr' type='text'value={bedroomAbvGrd} onChange={(e) => setBedroomAbvGrd(e.target.value)}></input>
         </div>
         <div>
-        <label> Total number of rooms above ground </label>
+        <label> All Rooms above ground level </label>
+        <div>
+        </div>
         <input name='totRmsAbvGrd' type='text'value={totRmsAbvGrd} onChange={(e) => setTotRmsAbvGrd(e.target.value)}></input>
         </div>
-        <button type = 'submit'>Submit 
+        <button className='button' type = 'submit'>Submit 
         </button>
-        {housePrice && <p>Predicted house price is {housePrice}</p>}
       </form>
+      </div>
+      {housePrice && <p className='output'>Predicted house price is ${housePrice}</p>}
     </div>
   );
 }
