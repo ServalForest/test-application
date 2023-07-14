@@ -3,7 +3,7 @@ import './App.css';
 import { useState } from 'react';
 
 
- 
+
 function App() {
   const [lotArea, setLotArea] = useState('123');
   const [yearBuilt, setYearBuilt] = useState('2020');
@@ -15,7 +15,7 @@ function App() {
   const [housePrice, setHousePrice] = useState();
 
 
-  async function handleSubmit(e){
+  async function handleSubmit(e) {
     e.preventDefault();
     setHousePrice('');
     const query = `LotArea=${lotArea}&YearBuilt=${yearBuilt}&1stFlrSF=${frstFlrSF}&2ndFlrSF=${scndFlrSF}&FullBath=${fullBath}&BedroomAbvGr=${bedroomAbvGrd}&TotRmsAbvGrd=${totRmsAbvGrd}`
@@ -28,55 +28,56 @@ function App() {
     <div className="App">
       <h1> House Price Prediction</h1>
       <div className='form'>
-      <form onSubmit={handleSubmit}> 
-        <div>
-        <label> Lot Area </label>
-        </div>
-        <div>
-        <input name='lotArea' type='text' value={lotArea} onChange={(e) => setLotArea(e.target.value)}></input>
-        </div>
-        <div>
-        <label> Year Built </label>
-        <div>
-        </div>
-        <input name='yearBuilt' type='text'  value={yearBuilt} onChange={(e) => setYearBuilt(e.target.value)}></input>
-        </div>
-        <div>
-        <label> First Floor Square Footage </label>
-        <div>
-        </div>
-        <input name='1stFlrSF' type='text'value={frstFlrSF} onChange={(e) => set1stFlrSF(e.target.value)}></input>
-        </div>
-        <div>
-       <label> Second Floor Square Footage </label>
-       <div>
-       </div>
-        <input name='2ndFlrSF' type='text'value={scndFlrSF} onChange={(e) => set2ndFlrSF(e.target.value)}></input>
-        </div>
-        <div>
-        <label> Amount of bathrooms </label>
-        <div>
-        </div>
-        <input name='fullBath' type='text'value={fullBath} onChange={(e) => setFullBath(e.target.value)}></input>
-        </div>
-        <div>
-        <label> Bedrooms above ground level </label>
-        <div>
-        </div>
-        <input name='bedroomAbvGr' type='text'value={bedroomAbvGrd} onChange={(e) => setBedroomAbvGrd(e.target.value)}></input>
-        </div>
-        <div>
-        <label> All Rooms above ground level </label>
-        <div>
-        </div>
-        <input name='totRmsAbvGrd' type='text'value={totRmsAbvGrd} onChange={(e) => setTotRmsAbvGrd(e.target.value)}></input>
-        </div>
-        <button className='button' type = 'submit'>Submit 
-        </button>
-      </form>
-      </div>
-      {housePrice && <p className='output'>Predicted house price is ${housePrice}</p>}
-    </div>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label> Lot Area </label>
+          </div>
+          <div>
+            <input type='number' name='lotArea' value={lotArea} onChange={(e) => setLotArea(e.target.value)}></input>
+          </div>
+          <div>
+            <label> Year Built </label>
+            <div>
+            </div>
+            <input type='number' name='yearBuilt' value={yearBuilt} onChange={(e) => setYearBuilt(e.target.value)}></input>
+          </div>
+          <div>
+            <label> First Floor Square Footage </label>
+            <div>
+            </div>
+            <input type='number' name='1stFlrSF' value={frstFlrSF} onChange={(e) => set1stFlrSF(e.target.value)}></input>
+          </div>
+          <div>
+            <label> Second Floor Square Footage </label>
+            <div>
+            </div>
+            <input type='number' name='2ndFlrSF' value={scndFlrSF} onChange={(e) => set2ndFlrSF(e.target.value)}></input>
+          </div>
+          <div>
+            <label> Amount of bathrooms </label>
+            <div>
+            </div>
+            <input type='number' name='fullBath' value={fullBath} onChange={(e) => setFullBath(e.target.value)}></input>
+          </div>
+          <div>
+            <label> Bedrooms above ground level </label>
+            <div>
+            </div>
+            <input type='number' name='bedroomAbvGr' value={bedroomAbvGrd} onChange={(e) => setBedroomAbvGrd(e.target.value)}></input>
+          </div>
+          <div>
+            <label> All Rooms above ground level </label>
+            <div>
+            </div>
+            <input type='number' name='totRmsAbvGrd' value={totRmsAbvGrd} onChange={(e) => setTotRmsAbvGrd(e.target.value)}></input>
+          </div>
+          <button className='button' type='submit'>Submit
+          </button>
+        </form>
+      </div >
+      {housePrice && <p className='output'>Predicted house price is ${housePrice}</p>
+      }
+    </div >
   );
 }
 
