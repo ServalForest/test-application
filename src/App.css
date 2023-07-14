@@ -21,12 +21,11 @@ h1 {
 .App input {
   margin-top: 5px;
   border-radius: 34px;
-  padding-left: 10px;
   font-size: 19px;
   background-color: #F5F5F5;
   color: #6D6875; 
   border: none;
-  padding: 8px;
+  padding: 8px 8px 8px 14px;
   width: 90%;
 }
 
